@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMDb top 100</title>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <!-- jquery -->
+    <script src="jquery-3.3.1.min.js"></script>    
+    <script type="text/javascript" src="underscore-noflect.js"></script>
+</head>
+
+<body>
+    <h1>IMDb Top 100</h1>
+    <hr/>
+    <button id='Crawler'>Crawler</button>
+    <!-- 給AJAX DOM操作用 -->
+    <div id='allData'></div>
+</body>
+
+<!-- 模板 underscore-->
+<script type="text/template" id="moban">
+    <div class="liuyankuai">
+        <p> Rank = {{= rank }} </p>
+        <p> <img src={{= img }}> </p>
+        <p> Title = {{= title }} </p>
+        <p> Rating = {{= rating }} </p>
+        <p> Year = {{= year }} </p>
+        <p> <a href={{= href }}> Link </a> </p>
+        <hr/>
+    </div>
+</script>
+    
+<script src="webScript.js"></script>
+</html>
